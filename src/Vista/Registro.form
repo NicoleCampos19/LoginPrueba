@@ -35,16 +35,25 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtNombre" min="-2" pref="273" max="-2" attributes="0"/>
-                  <Component id="id_Apellido" min="-2" pref="273" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="id_fechaNacimiento" alignment="0" pref="273" max="32767" attributes="0"/>
-                      <Component id="idTelefono" alignment="0" max="32767" attributes="0"/>
-                      <Component id="idCorreo" alignment="0" max="32767" attributes="0"/>
-                      <Component id="idContrasena" alignment="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="txtNombre" min="-2" pref="273" max="-2" attributes="0"/>
+                          <Component id="txtApellido" min="-2" pref="273" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="304" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="txtFechaNacimiento" alignment="0" pref="273" max="32767" attributes="0"/>
+                          <Component id="txtTelefono" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtCorreo" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtContraseña" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="btnRegistrarse" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="300" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -59,29 +68,30 @@
               <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="id_Apellido" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="txtApellido" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="id_fechaNacimiento" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="txtFechaNacimiento" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="idCorreo" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="txtCorreo" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                   <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="48" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="idTelefono" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
+                  <Component id="txtTelefono" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnRegistrarse" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtContraseña" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
                   <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="idContrasena" alignment="3" min="-2" pref="49" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+              <EmptySpace pref="96" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -103,10 +113,13 @@
         <Property name="text" type="java.lang.String" value="Nombres:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="idTelefono">
+    <Component class="javax.swing.JTextField" name="txtTelefono">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tel&#xe9;fono"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTelefonoActionPerformed"/>
+      </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
@@ -116,7 +129,7 @@
         <Property name="text" type="java.lang.String" value="Apellidos:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="id_Apellido">
+    <Component class="javax.swing.JTextField" name="txtApellido">
       <Properties>
         <Property name="text" type="java.lang.String" value="Apellido"/>
       </Properties>
@@ -129,7 +142,7 @@
         <Property name="text" type="java.lang.String" value="Fecha:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="id_fechaNacimiento">
+    <Component class="javax.swing.JTextField" name="txtFechaNacimiento">
       <Properties>
         <Property name="text" type="java.lang.String" value="Fecha de nacimiento"/>
       </Properties>
@@ -142,7 +155,7 @@
         <Property name="text" type="java.lang.String" value="Correo:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="idCorreo">
+    <Component class="javax.swing.JTextField" name="txtCorreo">
       <Properties>
         <Property name="text" type="java.lang.String" value="Correo"/>
       </Properties>
@@ -160,9 +173,17 @@
         <Property name="text" type="java.lang.String" value="Contrase&#xf1;a:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="idContrasena">
+    <Component class="javax.swing.JTextField" name="txtContrase&#xf1;a">
       <Properties>
         <Property name="text" type="java.lang.String" value="Contrase&#xf1;a"/>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRegistrarse">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jButton1"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
